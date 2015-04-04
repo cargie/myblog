@@ -1,4 +1,11 @@
+{% if articles %}
 {% for article in articles %}
     <a href="/blog/{{ article.slug }}"><h1>{{ article.title }}</h1></a>
     <p>{{ article.body }}</p>
 {% endfor %}
+
+{% else %}
+
+<h1>No post available</h1>
+
+{% endif %}
